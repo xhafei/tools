@@ -1,13 +1,20 @@
 auto lo
-
 iface lo inet loopback
-iface eth0 inet static
 
-address 122.204.142.143
-netmask 255.255.255.0
-gateway 122.204.142.1
- 
+auto eth0
+allow-hotplug eth0
+iface eth0 inet manual
 
-#allow-hotplug wlan0
-#iface wlan0 inet manual
-#wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet manual
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+wpa-ssid PL_3_3
+wpa-psk 3305308305308
+
+auto wlan1
+allow-hotplug wlan1
+iface wlan1 inet manual
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
