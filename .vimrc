@@ -7,7 +7,7 @@ set shiftwidth=4
 ab .i #include<iostream>
 ab .u using namespace std;
 ab .m int main(){}
-ab .I #inclue<
+ab .I #include<
 ab .r return 0;
 
 nmap <silent> <F5> gg=G
