@@ -20,7 +20,6 @@ int finished = 0;
 
 void *customer(void *arg)
 {
-	srand((unsigned)time(NULL));
 	sleep(rand()%10);
 	cout << "new customer:" << pthread_self() << endl; 
 	sem_wait(&mutex);
@@ -111,7 +110,8 @@ int main()
 		perror("baber thread creation failure");
 	}
 	printf("barber thread created\n");
-	sleep (1);
+	
+	srand((unsigned)time(NULL));
 	for(int i = 0; i < customer_thread; i++)
 	{
 		res = pthread_create(&a_thread, NULL, customer, NULL);
