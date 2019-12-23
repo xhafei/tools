@@ -7,6 +7,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
+set paste
 
 ab .i #include<iostream>
 ab .u using namespace std;
