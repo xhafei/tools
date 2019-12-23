@@ -1,8 +1,12 @@
 set nu
 syntax on
 set cindent
-set shiftwidth=4
 
+set ts=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
 
 ab .i #include<iostream>
 ab .u using namespace std;
